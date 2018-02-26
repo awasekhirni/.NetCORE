@@ -1,0 +1,25 @@
+Table of Contents => .NET Core 2.0
+1. Scenario1=> consoleappone => console application with .Net core 
+2. Scenario2=> classlibrary => class library applciation with .Net core 2.0
+3. Scneario3=> solution => create a solution and add both consoleappone and classlibrary to the solution.
+4. scenario 4=> visual studio 2017 => create a console application 
+5. scenario 5=> ASP.NET Core Empty Web Application using CLI  
+6. Scenario 6=> ASP.NET Core MVC 2.0 Application 
+7. Scenario 7=> ASP.NET Core 2.0 MVC with Razor Application 
+8. Scenario 8=> ASP.NET Core 2.0 with Angular 
+9. Scenario 9=> ASP.NET Core 2.0 with ReactJS 
+10. Scenario 10=> ASP.NET Core 2.0 with ReactJS +Redux 
+11. Scenario 11=> ASP.NET Core 2.0 with MVC + Individual Authentication 
+12. Scenario 12 => ASP.NET Core 2.0 with Razor + Individual Authentication 
+13. Scenario 13=>ASP.NET Core 2.0 with Razor +Individual Authentication 
+14. Scenario 14=> Kestrel => Writing a basic http server to render http web server
+15. Scenario 15 => ASP.NET Core 2.0 Application Development with Visual Studio 2017. 
+     Empty Web Application 
+     ASP.NET Core 2.0 MVC 
+     ASP.NET Core 2.0 MVC with razor views 
+     ASP.NET Core 2.0 Web API 
+     ASP.NET Core 2.0 MVC using Angular 
+     ASP.NET Core 2.0 MVC using ReactJS 
+     ASP.NET Core 2.0 MVC using ReactJS + Redux 
+
+16. Scenario 16 => ZOMATO CORE =>ASP.NET CORE 2.0 Empty Application Demo 
