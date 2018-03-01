@@ -22,4 +22,25 @@ Table of Contents => .NET Core 2.0
      ASP.NET Core 2.0 MVC using ReactJS 
      ASP.NET Core 2.0 MVC using ReactJS + Redux 
 
-16. Scenario 16 => ZOMATO CORE =>ASP.NET CORE 2.0 Empty Application Demo 
+16. Scenario 16 => ZOMATO CORE (Configuration/Service Demo)=>ASP.NET CORE 2.0 Empty Application Demo 
+      a. defining appsettings.json to define application settings at runtime.
+      b. configuration builder 
+      c. binding the configuration builder properties to render it to the view. 
+      d. Writing a Service and configuring the service in startup.cs 
+
+17. Scenario 17=> MiddleWare Functions Demo 
+    a. list of middle ware functions in ASP.NET Core 2.0 
+    b.Writing your custom middle ware function => http request pipelines
+    c. middleware functions 
+18. Scenario18=>  conventional routing example with mvc middleware 
+    a. conventional routing using IRouteBuilder 
+    b. app.Usemvc();
+    c.controllers 
+    d.models
+    e. action results => objectresult
+19.Scenario19=> ActionResult/IActionResult demo with asp.net core 2 mvc application  
+    a. type of actionresults
+    b. uses of action results 
+    c. demo using various action results. 
+    d.
+     
