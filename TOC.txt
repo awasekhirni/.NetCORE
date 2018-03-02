@@ -42,5 +42,21 @@ Table of Contents => .NET Core 2.0
     a. type of actionresults
     b. uses of action results 
     c. demo using various action results. 
-    d.
-     
+20.Scenario20=> Asp.NetCore 2.0 MVC Application with inmemorydata service. 
+    a. creating an mvc application with model,controller and view. 
+    b. create a service and register the service with startup.cs (configureservices)
+    c. bind the service with the controller 
+    d. create a view to bind it to the controller. 
+21. Scenario21=> ASP.NETCore2.0 MVC Application with Models and ViewModels + Inmemorydata service. 
+    a.DTO/ViewModel which does not persist to the database. 
+    b. Viewmodel, service and wrting a custom view. 
+22. Scenario 22=> ASP.NET Core 2.0 MVC Application with EntityFramework Core 2.0 + SQLServer 
+    a.installing EntityFramework Core 2.0 
+    b. registring DotnetCLITool into project.csproj 
+    c. dotnet ef CLI demos 
+    d. creating a model => binding it to dbcontext => Microsoft.EntityFrameworkCore 
+    e. creating an interface for service and its implementation. reading appsettings.json into startup.cs
+    f. executing migrations using dotnet ef database update -verbose 
+    g. creating a controller with entityframework 
+    h. inserting some records to the database 
+    i. running your application. 
