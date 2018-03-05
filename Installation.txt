@@ -1,0 +1,7 @@
+Installation Instructions Dot Net Core 2.0 
+1. Download and install visual studio 2017 Community Edition
+2. https://download.microsoft.com/download/1/1/5/115B762D-2B41-4AF3-9A63-92D9680B9409/dotnet-sdk-2.1.4-win-gs-x64.exe
+3. MS SQL Express 2014 
+4. www.getbootstrap.com 
+5. Entity Framework Core 2.0 
+
