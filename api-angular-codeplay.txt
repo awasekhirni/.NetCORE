@@ -1,0 +1,63 @@
+webpack => amdl 
+asynchronous module definition and loader. 
+msbuild (c#)
+=> webpack 
+=>systemjs 
+=> grunt task runnner 
+=> gulp task runner 
+=> requirejs 
+
+1.scaffold your applicationusing asp.net core angular 
+   dotnet new angular 
+2. cd applicationfolder
+3. npm install --save //=> node_modules folder  this will read package.json 
+and install all the angular dependencies in the node-modules 
+4.dotnet build 
+5. dotnet run http://localhost:5000
+5b. dotnet add package Microsoft.EntityFrameworkCore.Design
+6. add DotNetCliReference to Project.csproj 
+ <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+    <DotNetCliToolReference Include="Microsoft.EntityFrameCore.Tools.DotNet" Version="2.0.1" />
+  </ItemGroup>
+  7. dotnet new sln 
+  8. open it in visual studio and add project 
+  9. create models for the database 
+  10. Add Context folder and Add DbSets 
+  11. Startup.cs 
+      => add Swashbuckle.swagger.aspnetcore reference 
+      => add 
+      //  ConfigureServices
+
+         services.AddDbContext<CallCenterContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("CallCenterConnect"));
+            });
+
+
+    services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info {
+                    Title = "GeoTrackerAPI", Version = "V1"
+                });
+            });
+            
+          //  Configure
+
+          app.UseStatusCodePages();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "GeoTrackerAPI V1");
+            });
+
+
+=> add services (if required)
+
+12. build your application 
+dotnet ef dbcontext info 
+13. dotnet ef migrations add cr_initialcreate 
+14. dotnet ef database update 
+15. add controllers with ef crud for all the models 
+16. build your application and test in swagger 
+17. start writing angular application. 
