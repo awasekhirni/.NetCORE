@@ -61,3 +61,25 @@ dotnet ef dbcontext info
 15. add controllers with ef crud for all the models 
 16. build your application and test in swagger 
 17. start writing angular application. 
+
+18.create folder for angular application 
+19.create services inside angular application => commonservice 
+inject http, httpModule, JsonpModule and RequestOptions. 
+ => register all the api calls to a UrlArray 
+ => call the methods to fetch the data 
+    
+     return this.http
+      .get(this.url + this.apiUrl[1])
+      .map((response: Response) => response.json()).catch(this.handleError);
+
+20. create component => inject lifecycle hooks (ngOnInit, onDestroy, onChanges, AfterViewInit, AfterViewChecked, DoCheck, AfterContentInit, AfterContentChecked)
+=> subscribe to this method , localstorage (sectors)
+ return this._cs.getBusinessSectorsData().subscribe(results=>{
+            this.sectors = results;
+            console.log(results);
+        });
+
+21. Bind sectors to the view using *ngFor to iterate through a collection of objects => componentview.html 
+22.App.shared.module.ts => register the components, and then register the providers , finally, we bind the component path in the router
+23. register the navigation view component => to render the path => routeLink 
+24. build your application and run it . http://localhost:port/business
