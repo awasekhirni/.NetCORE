@@ -6,6 +6,7 @@ msbuild (c#)
 => grunt task runnner 
 => gulp task runner 
 => requirejs 
+Dotnetcore 2.0.2 version. 
 
 1.scaffold your applicationusing asp.net core angular 
    dotnet new angular 
