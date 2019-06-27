@@ -1,0 +1,8 @@
+Govt of Egypt would like to create an online flight management system to the growing travel demand and to establish as an alternative transit route to europe, americas. With growing internet usage, users would like to purchase airline tickets using online platform.
+
+Users of the system should be able to retrieve flight information between any possible selection of cities with a given date/time of travel. It would present to the users with alternative routes to europe, america and scandinavia using cairo as transit destination. 
+the system supports two types of users customers and employee. Each flight has a limited number of seats, there are different flights which depart from or arrive at/from different cities on different dates and times. Cairo Airport transit has only 2 runways and has 100 bays for boarding, each flight on landing should be given a bay for parking their flight on landing. Each flight takes 15 minutes to go in the air flight or land and park in the bay. Every flight has 1.5 hours to disembark and embark the passengers.
+
+The airport has 50 refueling tankers to refuel the planes and it takes 15 minutes to fill in full-tank. The airport management system will schedule refueling of the tank
+
+Each flight has different travel classes with different pricing.Users of the system can make a new reservation either one way or two way.
