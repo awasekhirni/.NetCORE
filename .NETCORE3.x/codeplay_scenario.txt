@@ -1,0 +1,171 @@
+copyright awasekhirni@gmail.com awase008@gmail.com 
+
+Steps to Create OnionSeed/Clean Architecture Template from Scratch (Project Kalonji(OnionSeed))
+1.create a blank solution in asp.net core 3 using visual studio 2019 ce 
+2. Create Folders 
+   - Core
+   - Infrastructure 
+   - WebUI 
+   - Test
+3.Inside Core Folder Add two Asp.Net Core 3.x projects
+   OnionSeedSol.Domain
+   OnionSeedSol.Application 
+4. Inside Infrastructure Folder Add two Asp.Net Core 3.x project 
+   OnionSeedSol.Infrastructure.DbPersistence
+OnionSeedSol.Infrastructure.Shared 
+
+5. remove the class1.cs files in all the projects 
+6. Switch to WebUI folder. Inside WebUI Folder Create WebAPI Project 
+  OnionSeedSol.WebApi 
+Section-II
+7. Switch to OnionSeedSol.Domain 
+   -> lets add the following folder 
+   7a. Entities/ => Application Entity Models 
+   7b. Enums/ => Enumerations to be used with Entities 
+   7c. Common/ => Common/shared items 
+   7d. Application Configuration Settings => AppSettings/ => this could have mailsettings/jwtsettings 
+   7e. common => add BaseEntity.cs and AuditableBaseEntity.cs 
+8. Adding package libraries to the project 
+  Switch to => OnionSeedSol.Application 
+  Open => Package Manager Console and Install-Packages 
+
+  Install-Package AutoMapper 
+  Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection 
+  Install-Package FluentValidation 
+  Install-Package FluentValidation.DependencyInjectionExtensions 
+  Install-Package MediatR.Extensions.Microsoft.DependencyInjection 
+  Install-Package Microsoft.EntityFrameworkCore 
+  Install-Package Microsoft.EntityFrameworkCore.InMemory 
+  Install-Package Newtonsoft.Json 
+  Install-Package System.Text.Json 
+
+  => 8a. lets add Project Reference -> OnionSeedSol.Domain 
+  => 8b. lets add the following folders 
+         Behaviours/
+         AppFeatures/ (ApplicationFeatures)  => this will have Commands/  and Queries/ 
+         Interfaces/Repositories 
+         Wrappers 
+         Mappings 
+         Parameters 
+         DTOs
+         Exceptions
+ => 8c. finally lets add a class to bundle this project as a package to be used else where 
+        DependencyInjection.cs 
+
+
+9. Switch to Infrastructure.DbPersistence Project 
+  9a. Install-Package dependencies using Package Manager Console 
+  Install-Package Microsoft.AspNetCore.Identity.EntityFrameworkCore 
+  Install-Package Microsoft.EntityFrameworkCore.SqlServer 
+  Install-Package Microsoft.EntityFrameworkCore.Design 
+  Install-Package Microsoft.EntityFrameworkCore.Tools 
+  Install-Package Microsoft.Extensions.Options.ConfigurationExtensions 
+  Install-Package Microsoft.EntityFrameworkCore.Relational 
+
+  9b. Now lets add Project Dependency using Project Reference 
+  Add Project Reference of 
+       i. OnionSeedSol.Domain
+       ii.OnionSeedSol.Application 
+
+  9c. Create folders in Infrastructure.DbPersistence Project 
+      Context/ => for ApplicationDbContext 
+      Repositories/ => for Application Repositiories 
+      Migrations/ => for DbMigrations 
+
+  9d. Finally lets bundle this assembly for dependency injection, by creating a class for Dependency injection=> DependencyInjection.cs 
+
+  10. Switch to WebUI=> OnionSeedSol.WebApi => Install Package Libraries required using Package Manager Console 
+    Install-Package FluentValidation.AspNetCore 
+    Install-Package Microsoft.AspNetCore.Mvc.NewtonsoftJson 
+    Install-Package Microsoft.AspNetCore.Mvc.Versioning
+    Install-Package Microsoft.EntityFrameworkCore.Tools 
+    Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design 
+    Install-Package Serilog.AspNetCore 
+    Install-Package Serilog.Enrichers.Environment
+    Install-Package Serilog.Enrichers.Process
+    Install-Package Serilog.Enrichers.Thread
+    Install-Package Serilog.Settings.Configuration 
+    Install-Package Serilog.Sinks.MSSqlServer
+    Install-Package Swashbuckle.AspNetCore 
+    Install-Package Swashbuckle.AspNetCore.Swagger 
+
+    10b. Lets add project references to this project 
+     project reference => OnionSeedSol.Application, OnionSeedSol.Infrastructure.DbPersistence ,
+     OnionSeedSol.Infrastructure.*
+    
+    10c. Lets add additional folders to WebUI.WebApi Project 
+        Middlewares/ 
+        Models/
+        Services/
+        Extensions/ 
+
+    10d. Lets configure the application settings for logging and database connection strings 
+    WebApi/appsettings.json 
+
+    {
+  "UseInMemoryDatabase": false,
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost\\SQLEXPRESS; Database=Onionseeddb; Trusted_Connection=True; MultipleActiveResultSets=true",
+    "IdentityConnection": "Server=localhost\\SQLEXPRESS;Trusted_Connection=True;Initial Catalog=identityDb;Integrated Security=True;MultipleActiveResultSets=True"
+  },
+  "Serilog": {
+    "Using": [],
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning"
+      }
+    },
+    "WriteTo": [
+      {
+        "Name": "Console"
+      }
+    ],
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName",
+      "WithProcessId",
+      "WithThreadId"
+    ],
+    "Properties": {
+      "ApplicationName": "Serilog.WebApplication"
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*"
+}
+
+
+Section III - Wiring them up 
+11. Switch to Applciation Layer/ Wrappers to create Response Object Class Template for Responses 
+    
+12. Inside DTOs => lets create User Account DTOs 
+   12a. AuthenticationRequest class 
+   12b. AuthenticationResponse class 
+   12c. ForgotPasswordRequest class 
+   12d. RefreshToken class 
+   12e. RegisterRequest class 
+   12f. VerifyEmailRequest class 
+   12g. Email/EmailRequest class 
+
+
+
+
+13. Now lets create Interfaces/ 
+    IAccountService interface 
+	IAuthenticatedUserService interface 
+	IDateTimeService interface 
+	IEmailService interface 
+	Wrappers/PagedResponse.cs => class to be used in GenericRepository Interface
+	IGenericRepositoryAsync interface 
+
+
+
+
