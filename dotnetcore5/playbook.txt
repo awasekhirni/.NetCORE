@@ -1,0 +1,86 @@
+Playbook for Creating a Multi-layer Asp.Net Core 5 Web Api Application
+1. Create a blank Solution => MultilayerAppdemoTwo 
+2. Create a new standard library => ProductCatalog.Domain => DomainModels 
+    a. create CatalogBrand Model 
+	b. create CatalogType 
+	c. create CatalogItem
+2. Create a new standard Library => ProductCatalog.Repository => Repository Interfaces 
+     => Dependencies => add ProductCatalog.Domain 
+	 a. create ICatalogItemRepository.cs 
+	 b. create ICatalogBrandRepository.cs 
+	 c. create ICatalogTypeRepository.cs 
+	 
+	 
+ public interface ICatalogBrandRepository
+    {
+        Task<IEnumerable<CatalogBrand>> GetCatalogItemsAsync();
+        Task<CatalogBrand> GetCatalogBrandDetailsAsync(int id);
+
+        Task<CatalogBrand> AddAsync(CatalogBrand item);
+
+        Task UpdateAsync(CatalogBrand item);
+
+        Task DeleteAsync(int id);
+    }
+	
+	
+	 public interface ICatalogItemRepository
+    {
+        Task<IEnumerable<CatalogItem>> GetCatalogItemsAsync();
+        Task<CatalogItem> GetCatalogItemDetailsAsync(int id);
+
+        Task<CatalogItem> AddAsync(CatalogItem item);
+
+        Task UpdateAsync(CatalogItem item);
+
+       Task DeleteAsync(int id);
+
+    }
+	
+	public interface ICatalogTypeRepository
+    {
+        Task<IEnumerable<CatalogType>> GetCatalogItemsAsync();
+        Task<CatalogType> GetCatalogTypeDetailsAsync(int id);
+
+        Task<CatalogType> AddAsync(CatalogType item);
+
+        Task UpdateAsync(CatalogType item);
+
+        Task DeleteAsync(int id);
+
+    }
+	 
+3. Create a new standard Library => ProductCatalog.EFRepository => Implementation of the interfaces here 
+   # the intent is to keep the entity framework implementations as a separate layer, in the event we would like to use Dapper Framework or ADO.Net 
+   this would provide some flexibility 
+   => Dependencies => add ProductCatalog.Repository 
+   => Install Miscrosoft Entity Framework core using NugetPackage Manager 
+    => Create a folder => context => ProductCatalogAPIContext, ProductCatalogSeed
+		
+   Implement => a. CatalogItemRepository using ProductCatalogAPIContext
+			b. CatalogBrandRepository using ProductCatalogAPIContext
+			c. CatalogTypeRepository using ProductCatalogAPIContext
+
+4.Create a new standard Library => ProductCatalog.BusinessObjects => Business Layer Logic 
+    # create interfaces and then implementations of the domain objects for BLL 
+	=> Dependenies => add ProductCatalog.Repository and ProductCatalog.Domain 
+	  => Interface a.ICatalogItemBO.cs b.ICatalogBrandBo.cs c.ICatalogTypeBO.cs 
+	  
+4. Create a new project => Web API => ProductCatalog.WebAPI => JSON WebAPI using swashbuckle 
+   => dependences => ProductCatalog.BusinessObjects , EFRepository and Repository 
+     <ItemGroup>
+    <ProjectReference Include="..\ProductCatalog.BusinessObjects\ProductCatalog.BusinessObjects.csproj" />
+    <ProjectReference Include="..\ProductCatalog.EFRepository\ProductCatalog.EFRepository.csproj" />
+    <ProjectReference Include="..\ProductCatalog.Repository\ProductCatalog.Repository.csproj" />
+  </ItemGroup>
+  
+  Install-Package Microsoft.EntityFrameworkCore.SqlServer
+  
+ => create API controllers using BusinessObjects Interfaces 
+      => CatalogItemsController, CatalogBrandsController, CatalogTypesController 
+	  
+	  Register dependent services in startup.cs 
+	    services.addtransient()
+      
+5. Go to Package Manager Console 
+Add-Migration "Initial Script"
