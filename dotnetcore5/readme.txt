@@ -91,3 +91,6 @@ f. Create a new project => Web API => ProductCatalog.WebAPI => JSON WebAPI using
       
 g. Go to Package Manager Console 
 Add-Migration "Initial Script"
+
+##
+#3. Clean Architecture for dotnetcore 5 applications demo 
