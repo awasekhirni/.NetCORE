@@ -14,7 +14,7 @@ Updated for .Net Core 5 July 2021
        b. ApplicationLayer 
        c. InfrastructureLayer
        d. Mock 
-       e. WEBAPI with 
+       e. WEBAPI with Swagger/OpenAPISpec3.0
        f. AngularWebUI (optional)
        g.VuejsWebUI (optional)
        h.ReactjsWebUI(optional)   
