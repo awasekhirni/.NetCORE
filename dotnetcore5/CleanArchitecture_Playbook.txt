@@ -106,9 +106,32 @@ Updated for .Net Core 5 July 2021
 	  
 7. WebAPI => 	  
 	  
+	 #NugetPackage Install
+	 <ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+		<PackageReference Include="microsoft.aspnetcore.mvc.versioning.apiexplorer" Version="5.0.0" />
+		<PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.1">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.0" />
+		<PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+		<PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />
+		<PackageReference Include="Serilog.Sinks.Loggly" Version="5.4.0" />
+	</ItemGroup>
+	
+	
 	  
-	  
-	Create the following folder structure 
+	#Create the following folder structure 
 	WebAPI/API/V1/Controllers => Controllers with Controller Action Methods
 	WebAPI/Authentication => Authentication  
 	WebAPI/CORS  => Cross Object Resource Sharing and Security
@@ -120,6 +143,11 @@ Updated for .Net Core 5 July 2021
 	appsettings.json => ConnectionString Configuration for DB
 	Startup.cs => configure middleware in the order and register the services
 	Program.cs => HostbuilderConfiguration and Runnning.
+	
+	#ProjectReference
+	<ItemGroup>
+    <ProjectReference Include="..\InfrastructureLayer\InfrastructureLayer.csproj" />
+  </ItemGroup>
 
 
     PRESENTATION LAYERS 
