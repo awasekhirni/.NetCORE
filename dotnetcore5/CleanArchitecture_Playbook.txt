@@ -7,7 +7,7 @@ Updated for .Net Core 5 July 2021
       /src
 	  /scripts
 	  /tests 
-	  /cicdworkflows
+	  /cicdworkflows => docker files and docker-compose
 	  
 2. /src => create the following class libraries 
        a. DomainLayer 
