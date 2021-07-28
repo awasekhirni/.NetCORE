@@ -1,5 +1,6 @@
 Copyright 2020 Awase Khirni Syed 
 awase008@gmail.com Elain Technologies Canada Pvt ltd.
+Updated for .Net Core 5 July 2021
 
 1. Create Blank Solution
    => create three folders 
