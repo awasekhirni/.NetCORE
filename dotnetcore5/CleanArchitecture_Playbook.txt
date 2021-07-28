@@ -1,0 +1,139 @@
+Copyright 2020 Awase Khirni Syed 
+awase008@gmail.com Elain Technologies Canada Pvt ltd.
+
+1. Create Blank Solution
+   => create three folders 
+      /src
+	  /scripts
+	  /tests 
+	  /cicdworkflows
+	  
+2. /src => create the following class libraries 
+       a. DomainLayer 
+       b. ApplicationLayer 
+       c. InfrastructureLayer
+       d. Mock 
+       e. WEBAPI with 
+       f. AngularWebUI (optional)
+       g.VuejsWebUI (optional)
+       h.ReactjsWebUI(optional)   
+	  
+3. 	Create the following folder structure in DomainLayer 
+	DomainLayer 
+	DomainLayer/Common => AuditEntity
+	DomainLayer/Exceptions =>Exceptions 
+	DomainLayer/EntityModels => entity models here POCO
+	DomainLayer/Enums => Enumerators 
+	DomainLayer/Exceptions => Exceptions 
+	DomainLayer/Events => Domain level events/ behavioural code 
+	DomainLayer/ValueObjects 
+	AssemblyConfig.cs 
+	
+4. Create the following folder structure in ApplicationLayer 
+
+   NugetPackage Install: 
+   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+  
+  ProjectReference : DomainLayer 
+  
+  Folder Structure: 
+	ApplicationLayer/Common 
+	ApplicationLayer/BO 
+  
+
+5. Create the following folder structure in Mock  
+    NugetPackage Install:
+	
+	Project Reference:
+	<ItemGroup>
+    <ProjectReference Include="..\DomainLayer\DomainLayer.csproj" />
+  </ItemGroup>
+  
+  Mock/MockData
+          => SampleEntitiesOne.cs 
+		  => SampleEntitiesTwo.cs 
+		  
+ Mock/MockupGenerator.cs 
+
+
+6. Create the following folder structure in InfrastructureLayer 
+	NugetPackage Install: 
+	<ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.53.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="3.1.17" />
+    <PackageReference Include="StringToExpression" Version="1.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+  
+  Project Dependencies 
+   <ItemGroup>
+    <ProjectReference Include="..\ApplicationLayer\ApplicationLayer.csproj" />
+    <ProjectReference Include="..\DomainLayer\DomainLayer.csproj" />
+    <ProjectReference Include="..\Mock\Mock.csproj" />
+  </ItemGroup>
+  
+         
+	Add the following folder structure 
+	<ItemGroup>
+    <Folder Include="ApplicationDependencies\" /> => DataAccess, Services, Startup=>ConfigureServices
+    <Folder Include="Authentication\" /> => Authentication Core, Autentication External, Authentication Settings, StartUp=>ConfigureServices 
+    <Folder Include="Authorization\" /> => Authorization Claims, startup=>ConfigureServices
+    <Folder Include="Common\" /> Extensions, Validation
+    <Folder Include="Identity\" /> Model/ApplicationUser.cs, startup=>ConfigureServices 
+    <Folder Include="AzureKeyVault\" /> => AzureKeyVaultSettings, Startup=>ConfigureSettings
+    <Folder Include="Persistence\" /> ApplicationDbContext, EFORM, DapperORM 
+  </ItemGroup>
+  infrastructureSettings.json => infrastructure settings/configuration file 
+	  
+	  
+	  
+	  
+7. WebAPI => 	  
+	  
+	  
+	  
+	Create the following folder structure 
+	WebAPI/API/V1/Controllers => Controllers with Controller Action Methods
+	WebAPI/Authentication => Authentication  
+	WebAPI/CORS  => Cross Object Resource Sharing and Security
+	WebAPI/ErrorHandling => Error Handling
+	WebAPI/Logging  => Logger support
+	WebAPI/Properties
+	WebAPI/Swagger  =>OpenAPI specification 3.0 
+	WebAPI/Versioning => SwaggerConfiguration, interfaces etc.. 
+	appsettings.json => ConnectionString Configuration for DB
+	Startup.cs => configure middleware in the order and register the services
+	Program.cs => HostbuilderConfiguration and Runnning.
+
+
+    PRESENTATION LAYERS 
+    -------------------------------------
+    /WebUI.Mvc => Mvc Application (Razor/Blazor)
+
+
+    /AngularWebUI (Angular Client)
+	 - Follow my angular codeplays on github.com/awasekhirni
+
+
+    /ReactWebUI(React Client)
+	- Follow my angular codeplays on github.com/awasekhirni
+    
+
+    /VuejsWebUI(Vuejs Client)
+	- Follow my angular codeplays on github.com/awasekhirni
+
