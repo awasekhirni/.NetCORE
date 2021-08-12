@@ -11,4 +11,4 @@ DOTNET CORE ESSENTIALS
 .NET CORE TOOLS 
 .NET CORE CLI WRAPPER 
 
-.NetCore 5 => Updated with GraphQL Demos 
+.NetCore 5 https://github.com/awasekhirni/.NetCORE/tree/master/dotnetcore5 => Updated with GraphQL Demos 
