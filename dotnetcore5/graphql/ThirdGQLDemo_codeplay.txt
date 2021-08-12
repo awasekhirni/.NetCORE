@@ -1,0 +1,33 @@
+Codeplay GraphQL with Asp.Net Core 5 
+Awase Khirni Syed awasekhirni@gmail.com awase008@gmail.com 
+
+1 dotnet new web -n ThirdGQLDemo
+2 cd SecondGQLDemo 
+  a.donet new graphql --force
+3. dotnet add package HotChocolate.AspNetCore 
+4. dotnet add package HotChocolate.Data
+5. dotnet add package HotChocolate.Data.EntityFramework
+6. dotnet add package Microsoft.EntityFrameworkCore 
+7. dotnet add package Microsoft.EntityFrameworkCore.Design 
+8. dotnet add package Microsoft.EntityFrameworkCore.Tools 
+9. dotnet add package Microsoft.EntityFrameworkCore.SqlServer 
+10.dotnet add package GraphQL.Server.Ui.Voyager 
+
+
+register connection strings in appsettings.json 
+"ConnectionStrings": {
+    "DefaultConnection": "Server=(LocalDB)\\MSSQLLocalDB;Database=thirdgqldb;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+
+dotnet ef migrations add InitialCreate --context AppicationDbContext 
+dotnet ef migrations add InitialCreate --context BlogContext --output-dir Migrations/SqlServerMigrations
+dotnet ef migrations add InitialCreate --context SqliteBlogContext --output-dir Migrations/SqliteMigrations
+
+dotnet ef migrations add MyMigration --project ../SqlServerMigrations -- --provider SqlServer
+dotnet ef migrations add MyMigration --project ../SqliteMigrations -- --provider Sqlite
+
+
+dotnet ef database update 
+
+dotnet build 
+dotnet run 
