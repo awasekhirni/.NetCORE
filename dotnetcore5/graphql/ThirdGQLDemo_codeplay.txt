@@ -31,3 +31,14 @@ dotnet ef database update
 
 dotnet build 
 dotnet run 
+https://localhost:44397/graphql/
+graphql-> query{
+  command{
+    howTo
+    commandLine
+    platform{
+      name
+    }
+  }
+  
+}
