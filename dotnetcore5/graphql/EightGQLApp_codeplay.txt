@@ -1,0 +1,22 @@
+﻿Codeplay GraphQL with Asp.Net Core 5 
+Awase Khirni Syed awasekhirni@gmail.com awase008@gmail.com 
+
+1. Create ASP.Net Core 5 API application 
+2. Install GraphQL.AspNet 0.6.1-beta 
+ <PackageReference Include="GraphQL.AspNet" Version="0.6.1-beta" />
+
+3. Add model in EntityModels folder 
+4. Create Corresponding Controller by extending GraphController
+5. Configure Startup.cs
+6. build your application 
+7. Open postman => grapql 
+https://localhost:44345/graphql 
+Post =>
+query {
+    person(id: 18) {
+        id
+        firstName
+        lastName
+        forceUser
+    }
+}
