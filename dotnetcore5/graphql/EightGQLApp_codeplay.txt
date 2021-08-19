@@ -1,4 +1,4 @@
-﻿Codeplay GraphQL with Asp.Net Core 5 
+Codeplay GraphQL with Asp.Net Core 5 
 Awase Khirni Syed awasekhirni@gmail.com awase008@gmail.com 
 
 1. Create ASP.Net Core 5 API application 
@@ -9,7 +9,7 @@ Awase Khirni Syed awasekhirni@gmail.com awase008@gmail.com
 4. Create Corresponding Controller by extending GraphController
 5. Configure Startup.cs
 6. build your application 
-7. Open postman => grapql 
+7. Open postman => grapql  or add altair graphql client addon to firefox and open the url
 https://localhost:44345/graphql 
 Post =>
 query {
