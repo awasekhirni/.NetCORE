@@ -1,0 +1,83 @@
+﻿@model _29Nov2016DemoAppAreas.Areas.Customer.Models.CustomerModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>CustomerModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customerAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.province)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.province)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customerEmpStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerEmpStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.salaryType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.salaryType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customerEmployerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customerEmployerName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

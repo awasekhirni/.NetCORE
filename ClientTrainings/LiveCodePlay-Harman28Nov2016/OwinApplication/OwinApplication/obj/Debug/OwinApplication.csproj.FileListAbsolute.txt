@@ -1,0 +1,17 @@
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\obj\Debug\OwinApplication.csprojResolveAssemblyReference.cache
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\OwinApplication.dll.config
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\OwinApplication.dll
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\OwinApplication.pdb
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.dll
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Owin.dll
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.xml
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\obj\Debug\OwinApplication.dll
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\obj\Debug\OwinApplication.pdb
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.Diagnostics.dll
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.Host.HttpListener.dll
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.Hosting.dll
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.Diagnostics.xml
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.Host.HttpListener.xml
+E:\CT\Allstate-MVC-C#\LiveCodePlay-Harman28Nov2016\OwinApplication\OwinApplication\bin\Microsoft.Owin.Hosting.xml

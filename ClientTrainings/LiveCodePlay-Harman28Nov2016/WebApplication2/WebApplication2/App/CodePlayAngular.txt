@@ -1,0 +1,137 @@
+
+AngularJS 
+   1. Introduction to JavaScript 
+   2. Hoisting, Data Types, Loosely structured OOP
+   3. Design patterns in Javascript 
+      a. Object literal Notation for object construction
+	  b. Object Construction Pattern
+	  c. Anonymous Function (emulate privacy)
+	  d. IIFE 
+	  e. Module Pattern
+	  f.Revealing Module Pattern
+	  g. SOLID Patterns (Single Responsibility, Open Closed, Liskov Substitution, Interface Segregation Dependency Injection)
+	  h. MVC in JavaScript 
+
+	4. Bootstrapping angular Applications ng-app, ng-controller
+	5. Built-in directives 
+		a. One way binding using ng-bind, {{}}, ng-init
+		b. Two way binding using ng-model 
+		c. ng-repeat
+	6.builtin services $http, $resource 
+	7.filtering 
+	8. custom filters 
+	9. custom directives 
+		a.consuming directives EACM 
+		b. DDO - Directive Definition Object
+		  scope
+		  restrict
+		  template/templateurl
+		  link(scope, elem, attrs) => pre-compile, compile, compile 
+		  controller
+
+	10. Services ( built-in)
+		$log, $window, $timeout, $http, $resource
+
+
+
+
+   JavaScript 
+   Web based systems
+   HTML4 => JavaScript 
+   client side validations 
+   screen scraping, jquery ui, ajax 
+
+   Responsive Web based systems for Multimodal devices 
+   
+   HTML5 => javascript natively embedded 
+   <bdi> => takes in the data and aligns 
+   <email> => native javascript embedded to implement a specific behaviour 
+
+   Javascript => loosely structured object oriented programming
+	dynamically typed language 
+	
+	 
+	 Abstraction, Encapsulation, Polymorphism, Inheritance 
+
+	 Abstract object 
+
+	 ECMAScript Specification 
+	 European Computer Manufacturer Association - TC39 
+
+	 Browsers - deployment environment 
+
+	 2006 -> ES3
+	 current ES5
+
+	 Browsers 
+	 Chrome -> V8 -> C++ -> microprocessor instructions
+	 Firefox -> SpiderMonkey or ION Monkey ->C++ -> microprocessor instructions
+	 Apple javascript core -> objective C or Swift 
+
+
+	 caniuse.com 
+	 http://kangax.github.io/compat-table/es6/
+
+
+	 1.Object literal notation 
+
+	 var employee = {};
+	 employee.fName=" Awase";
+	 employee.lName="Syed";
+	 employee.Salary= 878887;
+
+	 console.log(employee.fName);
+	 console.log(employee['lName']);
+
+	 2. Object Construction Pattern 
+
+	 function Employee(fName,lName, Salary){
+		var self=this;
+		self.fName=fName;
+		self.lName=lName;
+		self.Salary = Salary;
+	 }
+
+	 // instantiate object 
+	 var sak = new Employee('Awase', 'Syed', 877887989);
+
+	 3.Anonymous Functions 
+	 functions without name 
+
+	 //Emulate privacy
+	  (function Product(prodId, prodName,prodDesc){
+	  var self=this;
+	  self.prodId=prodId;
+	  })();
+
+	  // Self invoking annonymous function expression
+	  (function(){})(); //standard notation 
+	  (function(){}()); // Douglas crockford notation
+
+
+	  // module pattern 
+	  
+	  //Immediately Invoked Function Expression
+
+	 var p = (function(){
+	 
+		function Product(prodId, prodName,prodDesc){
+	  var self=this;
+	  self.prodId=prodId;
+	  self.getprodId = function(){
+	  return self.getprodId;
+	  };
+	  }
+	 // expose only those object properties that you want to share with public
+	 return{
+	  
+	 }
+	 
+	 })();
+
+
+
+
+
+
+   

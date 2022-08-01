@@ -1,0 +1,35 @@
+﻿@model DealersTrack.Models.State
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>State</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.stateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stateRegion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stateRegion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.stateId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MovieApp">
+<head>
+    <title></title>
+    <script src="../lib/angular.js"></script>
+</head>
+<body>
+
+    <div ng-controller="MovieController">
+        <div ng-repeat="movie in movies">
+            <div>Title:{{movie.Title}}</div>
+            <div>Title:{{movie.Year}}</div>
+            <div>Title:{{movie.imdbID}}</div>
+            <div>
+                Poster:
+                <img ng-src="{{movie.Poster}}" alt="" />
+                
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <!--application specific scripts-->
+    <!--namespace-->
+    <script src="../movienamespace.js"></script>
+    <!--model-->
+    <!--controller-->
+    <script src="../controller/MovieController.js"></script>
+</body>
+</html>

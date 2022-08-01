@@ -1,0 +1,33 @@
+create an empty web application 
+
+Create OWIN Startup.cs file 
+Create WebApiConfig.cs file 
+
+
+Import the Assembly References from Nuget Packages 
+	Microsoft ASP.Net Web API 2.2 OWIN
+	Microsoft.Owin
+	Microsoft.Owin.Host.SystemWeb
+	Microsoft.Owin.SelfHost
+	Microsoft.Owin.Host
+	OwinHost
+
+WebConfig
+	<appSettings>
+		<add key="owin:AppStartup" value="Owindows.Startup" />
+	</appSettings>
+
+Startup.cs 
+     HttpConfiguration 
+     app.useWebApi
+/// add code for json formatters
+
+
+WebAPIConfig.cs 
+    => api routes 
+	 config.routes.maphttproutes()
+
+
+
+
+

@@ -1,0 +1,35 @@
+﻿@model CodeFirstApproach.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.prodName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prodDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.prodId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

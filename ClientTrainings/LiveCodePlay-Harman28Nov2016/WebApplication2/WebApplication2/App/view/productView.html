@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="ProductApp">
+<head>
+    <title></title>
+    <!-- import the core files-->
+    <script src="../lib/angular.js"></script>
+
+</head>
+<body>
+    
+    <div ng-controller="ProductController">
+        <div>prodId: {{lgac.prodId}}</div>
+        <div>prodname: {{lgac.prodName}}</div>
+        <div>prod Desc: {{lgac.prodDesc}}</div>
+        <div>prod isActive: {{lgac.prodisActive}}</div>
+    </div>
+
+
+
+    <!-- dependency injection-->
+    <!--namespace-->
+    <script src="../namespace.js"></script>
+    <!--model-->
+    <script src="../model/productModel.js"></script>
+    <!--controller-->
+    <script src="../controller/productController.js"></script>
+
+</body>
+</html>

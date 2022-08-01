@@ -1,0 +1,43 @@
+﻿@model DealersTrack.Models.Lendor
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lendor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dealer.dealerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dealer.dealerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lendorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lendorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lendorAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lendorAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.lendorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="container">
+
+
+        <!--1. start of the top bar -->
+        <div class="row">
+
+        </div>
+        <!--end of the top bar-->
+        <!--2. start of the logo area -->
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <img src="http://www.harman.in/wp-content/themes/harmanindia/images/harman-logo.png" alt="">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6"></div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+        </div>
+        <!--end of the top bar-->
+        <!--3. start of the top bar -->
+        <div class="row">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo right">Logo</a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        <li>@Html.ActionLink("Customer", "Index", "Customer", new { area = "Customer" }, null)</li>
+
+                        <li>@Html.ActionLink("Dealer", "Index", "Dealer", new { area = "Dealer" }, null)</li>
+
+
+
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                   
+                </div>
+            </nav>
+        </div>
+        <!--end of the top bar-->
+        <!--4. start of the top bar -->
+        <div class="row">
+            <div class="col s12 m3">
+                <div class="card panel ">
+                    <div class="card-content ">
+                        <span class="card-title">Sidebar</span>
+
+                        
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="col s12 m9">
+                <div class="card panel">
+                    <div class="card-content ">
+                        <span class="card-title">Main Dashboard</span>
+                        <nav>
+                            <div class="nav-wrapper">
+                                <div class="col s12">
+                                    <a href="#!" class="breadcrumb">First</a>
+                                    <a href="#!" class="breadcrumb">Second</a>
+                                    <a href="#!" class="breadcrumb">Third</a>
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- your code goes here -->
+
+                        @RenderBody()
+                        <!--end of your code goes here -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--end of the top bar-->
+        <!--5. start of the context area -->
+        <div class="row">
+
+        </div>
+        <!--end of the top bar-->
+        <!--6. start of the footer area -->
+        <div class="row">
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </div>
+        <!--end of the top bar-->
+
+    </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            
+        </div>
+    </div>
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

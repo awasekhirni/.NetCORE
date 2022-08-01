@@ -1,0 +1,43 @@
+﻿@model CodeFirstApproach.Models.ProductReview
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProductReview</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.product.prodName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.product.prodName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prodReviewDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodReviewDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prodRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prodRating)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.prodReviewId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,75 @@
+﻿@model _29Nov2016DemoAppAreas.Areas.Dealer.Models.DealerModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div>
+    <h4>DealerModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dealerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dealerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.legalName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.legalName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dbaName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dbaName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.webAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.webAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

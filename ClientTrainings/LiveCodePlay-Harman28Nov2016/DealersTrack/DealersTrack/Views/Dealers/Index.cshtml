@@ -1,0 +1,46 @@
+﻿@model IEnumerable<DealersTrack.Models.Dealer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.State.stateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dealerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dealerAddress)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.State.stateName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dealerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dealerAddress)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.dealerId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.dealerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.dealerId })
+        </td>
+    </tr>
+}
+
+</table>

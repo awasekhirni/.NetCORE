@@ -1,0 +1,46 @@
+﻿@model IEnumerable<CodeFirstApproach.Models.ProductReview>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.product.prodName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prodReviewDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prodRating)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.product.prodName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prodReviewDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prodRating)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.prodReviewId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.prodReviewId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.prodReviewId })
+        </td>
+    </tr>
+}
+
+</table>
